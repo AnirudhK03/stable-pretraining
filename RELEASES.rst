@@ -17,6 +17,15 @@ Unreleased
   mix ``(1 - lamb) * invariance + lamb * visreg``. Registered in
   ``stable_pretraining.methods`` and ``METHODS.md``, with an Imagenette
   ViT-S/16 benchmark under ``benchmarks/imagenet10/visreg-vit-small.py``.
+- ``HCL`` (Contrastive Learning with Hard Negative Samples): SimCLR-style
+  contrastive learning that reweights negatives toward hard negatives
+  (``beta``) and applies the debiasing correction of Debiased Contrastive
+  Learning (``tau_plus``), per Robinson et al., ICLR 2021. ``HCLLoss`` matches
+  the official implementation, is numerically stable at low temperatures, and
+  is a drop-in replacement for ``NTXEntLoss`` in ``forward.simclr``
+  (``beta=0, tau_plus=0`` recovers NT-Xent exactly). Registered in
+  ``stable_pretraining.methods`` and ``METHODS.md``, with a CIFAR-10 example
+  under ``examples/hcl_cifar10.py``.
 
 **Discoverability improvements**
 
