@@ -24,8 +24,9 @@ Unreleased
   the official implementation, is numerically stable at low temperatures, and
   is a drop-in replacement for ``NTXEntLoss`` in ``forward.simclr``
   (``beta=0, tau_plus=0`` recovers NT-Xent exactly). Registered in
-  ``stable_pretraining.methods`` and ``METHODS.md``, with a CIFAR-10 example
-  under ``examples/hcl_cifar10.py``.
+  ``stable_pretraining.methods`` and ``METHODS.md``, with an example under
+  ``examples/hcl_experiments.py`` that reproduces the paper's pretraining and
+  linear-evaluation protocol on CIFAR-10/100 and STL-10.
 
 **Discoverability improvements**
 
